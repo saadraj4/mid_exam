@@ -18,13 +18,17 @@ const TableHeaderRow = () => {
   return <tr><th>id</th><th>Name</th><th>Age</th><th>City</th><th>Ocuupation</th></tr>;
 }
 
-const TableRow = () => {
-  return data.map((sampleData) =>
-    <tr>
-      <td>{sampleData.id}</td><td>{sampleData.name}</td><td>{sampleData.age}</td><td>{sampleData.city}</td><td>{sampleData.occupation}</td>
+function TableRow(){
+
+  console.log(sampleData)
+
+  return sampleData.map(item =>
+    <tr key={item.id}>
+      <td>{item.id}</td><td>{item.name}</td><td>{item.age}</td><td>{item.city}</td><td>{item.occupation}</td>
     </tr>
   );
 }
+
 
 
 function Table() {
@@ -33,6 +37,7 @@ function Table() {
     <table>
       {TableHeaderRow()}
       {TableRow()}
+      
 
      
     </table>
