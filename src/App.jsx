@@ -5,6 +5,7 @@ import './App.css'
 import Table from './components/Table'
 import { sampleData } from './components/Data'
 import React from 'react'
+import Filtering from './components/filtering'
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
   return (
     <>
     <div>
-      
        <Table />
+       <Filtering/>
     </div>
 
     </>

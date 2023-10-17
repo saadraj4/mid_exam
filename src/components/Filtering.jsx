@@ -3,36 +3,50 @@ import Table from "./Table";
 
 const TableHeaderRow = () => {
     return <tr><th>id</th><th>Name</th><th>Age</th><th>City</th><th>Ocuupation</th></tr>;
-  }
+}
 
-  
-function search(name,age){
-    sampleData.filter(item.name==name && item.age == age).map(filtered =>(
+
+function search(name, age) {
+    sampleData.filter(item.name == name && item.age == age).map(filtered => (
         <tr key={item.id}>
-        <td>{item.id}</td><td>{item.name}</td><td>{item.age}</td><td>{item.city}</td><td>{item.occupation}</td>
-      </tr>
+            <td>{item.id}</td><td>{item.name}</td><td>{item.age}</td><td>{item.city}</td><td>{item.occupation}</td>
+        </tr>
 
     ))
 }
 
-function MyForm(){
+function MyForm() {
     return (
         <form>
-          <label>Enter your name:
-           <input type="text" id="name" />
-          </label>
+            <label>Enter your name:
+                <input type="text" id="nameinput" />
+            </label>
 
-          <label>Enter your age:
-            <input type="text" id = "age" />
+            <label>Enter your age:
+                <input type="text" id="ageinput" />
+            </label>
+
+            <label>
+          City
           </label>
         
-        {/* <button on onClick={search(name,age)}></button> */}
+        
+                
+            <label>
+                Occupation
+                </label>
+            <button>reset</button>
+
+            <button >search</button>
+            <br/>
+
+            {/* <button on onClick={search(document.getElementById(nameinput),document.getElementById(ageinput))}></button> */}
         </form>
-      )
+    )
 }
 
 
 
-  
 
-  export default MyForm
+
+export default MyForm
